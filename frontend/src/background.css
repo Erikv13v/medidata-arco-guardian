@@ -1,0 +1,323 @@
+.nature-bg{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+/* HOSPITAL DIFUMINADO */
+
+.hospital-silhouette{
+
+position:absolute;
+
+bottom:12%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:520px;
+
+height:180px;
+
+opacity:.08;
+
+background:
+
+linear-gradient(#7dd3fc,#7dd3fc);
+
+clip-path:polygon(
+0% 100%,
+0% 45%,
+15% 45%,
+15% 20%,
+30% 20%,
+30% 50%,
+45% 50%,
+45% 0%,
+60% 0%,
+60% 50%,
+75% 50%,
+75% 28%,
+90% 28%,
+90% 100%
+);
+
+filter:blur(1px);
+
+animation:hospitalGlow 8s ease-in-out infinite;
+
+}
+
+@keyframes hospitalGlow{
+
+0%{
+
+opacity:.05;
+
+}
+
+50%{
+
+opacity:.11;
+
+}
+
+100%{
+
+opacity:.05;
+
+}
+
+}
+
+/* LOGOS */
+
+.floating-logo{
+
+position:absolute;
+
+width:65px;
+
+opacity:.07;
+
+filter:drop-shadow(0 0 12px #7dd3fc);
+
+animation:logoFloat 16s infinite linear;
+
+}
+
+.logo-float-1{
+
+left:10%;
+
+top:18%;
+
+animation-duration:20s;
+
+}
+
+.logo-float-2{
+
+right:12%;
+
+top:24%;
+
+animation-duration:18s;
+
+}
+
+.logo-float-3{
+
+left:70%;
+
+bottom:28%;
+
+animation-duration:22s;
+
+}
+
+@keyframes logoFloat{
+
+0%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+50%{
+
+transform:translateY(-20px) rotate(8deg);
+
+}
+
+100%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+}
+
+/* FLORES */
+
+.flower{
+
+position:absolute;
+
+color:#8be9fd;
+
+opacity:.18;
+
+font-size:28px;
+
+animation:flowerFloat linear infinite;
+
+}
+
+.flower-1{
+
+left:8%;
+
+bottom:28%;
+
+animation-duration:18s;
+
+}
+
+.flower-2{
+
+left:82%;
+
+bottom:38%;
+
+animation-duration:21s;
+
+}
+
+.flower-3{
+
+left:58%;
+
+bottom:18%;
+
+animation-duration:16s;
+
+}
+
+.flower-4{
+
+left:22%;
+
+bottom:55%;
+
+animation-duration:20s;
+
+}
+
+@keyframes flowerFloat{
+
+0%{
+
+transform:
+
+translateY(0px)
+
+rotate(0deg);
+
+}
+
+50%{
+
+transform:
+
+translateY(-18px)
+
+rotate(12deg);
+
+}
+
+100%{
+
+transform:
+
+translateY(0px)
+
+rotate(0deg);
+
+}
+
+}
+
+/* PASTO */
+
+.grass{
+
+position:absolute;
+
+bottom:0;
+
+height:90px;
+
+opacity:.12;
+
+background:
+
+repeating-linear-gradient(
+90deg,
+
+#22c55e 0px,
+
+#22c55e 2px,
+
+transparent 2px,
+
+transparent 6px
+
+);
+
+}
+
+.grass-left{
+
+left:-5%;
+
+width:55%;
+
+transform:skewY(-2deg);
+
+}
+
+.grass-right{
+
+right:-5%;
+
+width:55%;
+
+transform:skewY(2deg);
+
+}
+
+/* MOVIL */
+
+@media(max-width:900px){
+
+.hospital-silhouette{
+
+width:320px;
+
+height:120px;
+
+bottom:16%;
+
+}
+
+.floating-logo{
+
+width:42px;
+
+opacity:.05;
+
+}
+
+.flower{
+
+font-size:18px;
+
+}
+
+.grass{
+
+height:50px;
+
+}
+
+}
